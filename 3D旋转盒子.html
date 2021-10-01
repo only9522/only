@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-size: 50px;
+            display: block;
+        }
+        
+        .box {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: aqua;
+            transform-style: preserve-3d;
+        }
+        
+        ul {
+            width: 200px;
+            height: 200px;
+        }
+        
+        li {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .t {
+            background-color: blue;
+        }
+        
+        .d {
+            background-color: blueviolet;
+        }
+        
+        .l {
+            background-color: aquamarine;
+        }
+        
+        .r {
+            background-color: brown;
+        }
+        
+        .q {
+            background-color: chocolate;
+        }
+        
+        .h {
+            background-color: chartreuse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="t">上</li>
+            <li class="d">下</li>
+            <li class="l">左</li>
+            <li class="r">右</li>
+            <li class="q">前</li>
+            <li class="h">后</li>
+        </ul>
+    </div>
+</body>
+
+</html>
