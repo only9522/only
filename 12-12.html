@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+        
+        .a,
+        .b,
+        .seater {
+            width: 90px;
+            height: 40px;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <input class="a" type="text" name="a"><input class="b" type="text" name="b" id=""><input class="seater" type="submit" value="生成结果">
+        <input class="a-1" type="text">
+        <input class="b-1" type="text">
+        <input class="c-1" type="text">
+        <input class="d-1" type="submit" value="结果">
+    </div>
+    <!-- <script>
+        for (let i = 1; i < 10; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(i + ' ')
+                document.write('X' + ' ')
+                document.write(j + ' ')
+                document.write('=' + ' ')
+                document.write(i * j + ' ')
+            }
+            document.write('<br/>')
+        }
+        document.write('*********************************************************************')
+        document.write('<br/>')
+    </script>
+    <script>
+        for (let n = -1; n < 13; n++) {
+            for (let i = -1; i < 13; i++) {
+                if (i === -1 && n === -1) {
+                    document.write('X' + ' ')
+                } else
+                if (i < 0 || n < 0) {
+                    document.write(-(n * i) + ' ')
+                } else {
+                    document.write(n * i + ' ')
+                }
+
+            }
+            document.write("<br/>")
+        }
+        document.write('***************************************************************************')
+        document.write('<br/>')
+    </script>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            if (i < 10) {
+                document.write('0' + i + ' ')
+                if (((i + 1) % 10) === 0) {
+                    document.write('<br/>')
+                }
+
+            } else {
+                document.write(i + ' ')
+                if (((i + 1) % 10) === 0) {
+                    document.write('<br/>')
+                }
+            }
+        }
+        document.write('**********************************************************************')
+        document.write('<br/>')
+    </script>
+    <script>
+        let n = 0,
+            j = 0,
+            o = 0;
+        for (let i = 1; i < 101; i++) {
+            if (i % 3 == 0) {
+                document.write(i + 'a' + ' ')
+                n++;
+            }
+            if (i % 5 == 0) {
+                document.write(i + 'b' + ' ')
+                j++;
+            }
+            if (i % 15 == 0) {
+                document.write(i + 'c' + ' ')
+                o++;
+            } else {
+                document.write(i + ' ')
+            }
+
+        }
+        document.write('<br/>')
+        document.write('a:' + n)
+        document.write('b:' + j)
+        document.write('c:' + o)
+        document.write('<br/>')
+        document.write('*************************************************************************************')
+    </script> -->
+    <script>
+        let a = document.querySelector('.a')
+        let b = document.querySelector('.b')
+        let seater = document.querySelector('.seater')
+            // seater.onclick = updat;
+        seater.addEventListener('click', updat);
+
+
+        function updat() {
+            (+a.value > +b.value) ? document.write('a大于b'): (+a.value < +b.value) ? document.write('a小于b') : document.write('a等于b')
+        }
+    </script>
+    <script>
+        let aone = document.querySelector('.a-1')
+        let bone = document.querySelector('.b-1')
+        let cone = document.querySelector('.c-1')
+        let dian = document.querySelector('.d-1')
+        dian.addEventListener('click', onder);
+
+        function onder() {
+            Number(cone.value = aone.value + bone.value);
+        }
+    </script>
+
+</body>
+
+</html>
