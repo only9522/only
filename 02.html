@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>one</h3>
+    <input type="text" placeholder='请输入要颠倒的值'>
+    <button>倒叙</button>
+    <p></p>
+    <h3>tow</h3>
+    <input type="text" placeholder='请输入IP地址'>
+    <button>隐藏最后的值</button>
+    <p></p>
+    <h3>three</h3>
+    <div id="time"></div>
+    <h3>four</h3>
+    <input type="text" placeholder="输入字符串">
+    <button>是否符合要求</button>
+    <p></p>
+    <h3>fove</h3>
+    <p></p>
+    <h3>six</h3>
+    <input type="text">
+    <select name="" id="">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="X">X</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text">
+    <button>运算</button>
+    <p></p>
+
+    <script>
+        let Conversion = document.querySelectorAll('input')[0]
+        let reversal = document.querySelectorAll('button')[0]
+        let result = document.querySelectorAll('p')[0]
+        let dx;
+        reversal.onclick = function() {
+            dx = Conversion.value.split('').reverse();
+            result.innerHTML = dx
+        }
+        let IP = document.querySelectorAll('input')[1]
+        let hide = document.querySelectorAll('button')[1]
+        let outPut = document.querySelectorAll('p')[1]
+        let hideIp, zu;
+        hide.onclick = function() {
+            zu = IP.value.split('');
+            zu[zu.length - 1] = '*'
+
+            hideIp = zu = zu.join('');
+            outPut.innerHTML = hideIp
+        }
+
+        function getTime() {
+            let time = document.getElementById("time")
+            var s = new Date();
+            let year = s.getFullYear();
+            let month = s.getMonth();
+            let day = s.getDate();
+            let Time = s.getHours();
+            let branch = s.getMinutes();
+            let second = s.getSeconds();
+            let week = s.getDay();
+            if (day < 10) {
+                day = "0" + day;
+            } else if (Time < 10) {
+                Time = "0" + Time;
+            } else if (branch < 10) {
+                branch = "0" + branch;
+            } else if (second < 10) {
+                second = "0" + second;
+            }
+            let showtime = year + '年' + month + '月' + day + '日' + Time + '时' + branch + '分' + second + '秒' + '星期:' + week
+            time.innerHTML = showtime;
+        }
+        setInterval(function on() {
+            getTime()
+        }, 1000)
+        let strand = document.querySelectorAll('input')[2]
+        let determine = document.querySelectorAll('button')[2]
+        let test = document.querySelectorAll('p')[2]
+
+
+        determine.onclick = function() {
+            let len = strand.value;
+            for (var i = 0; i < len.length - 1; i++) {　　　　　　
+                if (len.charCodeAt(i) > 255) {　　　　　　　　
+                    len += 2;
+                }　　　　　　
+                else　 {　　　　　　　
+                    len++;　　　　
+                }　　　　
+                return len;　　
+            }
+            if (1 < len.length && len.length < 11) {
+                test.innerHTML = '字符串长度符合要求'
+            } else {
+                test.innerHTML = '字符串不长度符合要求'
+            }
+            console.log(len);
+        }
+        let Follow = document.querySelectorAll('p')[3]
+        let o = Math.floor(Math.random() * 10).toString();
+        let t = Math.floor(Math.random() * 10).toString();
+        let s = Math.floor(Math.random() * 10).toString();
+        let f = Math.floor(Math.random() * 10).toString();
+        let fs = +(o + t + s + f);
+        Follow.innerHTML = fs;
+
+        let jieg = document.querySelectorAll('p')[4]
+        let ys = document.querySelectorAll('button')[3]
+        ys.onclick = function size() {
+            let sz = document.querySelectorAll('input')[3]
+            let fh = document.querySelector('select')
+            let sz1 = document.querySelectorAll('input')[4]
+            switch (fh.value) {
+                case '+':
+                    jieg.innerHTML = +sz.value + +sz1.value;
+                    break
+                case '-':
+                    jieg.innerHTML = +sz.value - +sz1.value;
+
+                    break
+                case 'X':
+                    jieg.innerHTML = +sz.value * +sz1.value;
+                    break
+                case '/':
+                    jieg.innerHTML = +sz.value / +sz1.value;
+                    break
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
