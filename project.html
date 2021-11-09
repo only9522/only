@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./project.css">
+    <title>project</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default  navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand sub-header" href="#">某管理系统</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav ">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">信息建立</a></li>
+                            <li><a href="#">信息查询</a></li>
+                            <li><a href="#">信息管理</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">帮助</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">设置</a></li>
+                        </ul>
+                        <li><a href="#">帮助</a></li>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="用户名...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="密码...">
+                        </div>
+                        <button type="submit" class="btn btn-default">登录</button>
+                    </form>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <div class="container-fluid-left ">
+        <div class="col-sm-2 col-md-2 col-lg-2 hidden-xs sidebar">
+            <ul class="nav nav-sidebar ">
+                <li class="active"><a href="#">首页</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="#">信息建立</a></li>
+                <li><a href="#">信息查询</a></li>
+                <li><a href="#">信息管理</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+                <li><a href="">设置</a></li>
+                <li><a href="">帮助</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <h3 class="page-header">某管理系统</h3>
+        <div class="table">
+            <button type="button" class="btn btn-default dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            操作1
+          </button> <button type="button" class=" btn btn-primary dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            操作2
+          </button> <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            操作3
+          </button> <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            操作4
+          </button> <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            操作5
+          </button> <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            操作6
+          </button></div>
+        <div class="row col-xs-12">
+            <div class="list-group col-xs-6">
+                <a href="#" class="list-group-item active ">
+                最新提醒
+                </a>
+
+                <ul class="list-group list-group-item ">
+                    <div class="alert alert-info" role="alert">
+                        <a href="#" class="alert-link"><strong>提示</strong> 您的订单（2014001）已经通过审批！</a>
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        <a href="#" class="alert-link"><strong>提示</strong>您的订单（2014002）已被打回！</a>
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        <a href="#" class="alert-link"><strong>提示</strong>您的订单（2013001）客户付款延迟！</a>
+                    </div>
+                </ul>
+            </div>
+            <div class="list-group col-xs-6">
+                <a href="#" class="list-group-item active ">
+                我的任务
+                </a>
+                <ul class="list-group list-group-item">
+                    <div class="alert1 alert-info" role="alert">
+                        <a href="#" class="alert-link">订单审批<span class="badge pull-right">42</span></a>
+                    </div>
+                    <div class="alert1 alert-info" role="alert">
+                        <a href="#" class="alert-link">收款确认<span class="badge pull-right">20</span></a>
+                    </div>
+                    <div class="alert1 alert-info" role="alert">
+                        <a href="#" class="alert-link"> 付款确认<span class="badge pull-right">10</span></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!-- 下部分 -->
+        <div class="row col-xs-12">
+            <div class="list-group col-xs-6">
+                <a href="#" class="list-group-item active ">
+                最新订单
+                </a>
+                <div class="panel panel-default">
+                    <div class="list-group list-group-item  table-responsive ">
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>产品</th>
+                                    <th>数量</th>
+                                    <th>总金额</th>
+                                    <th>业务员</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Apple Macbook air</td>
+                                    <td>10</td>
+                                    <td>80000</td>
+                                    <td>王小贱</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Apple iPad air</td>
+                                    <td>20</td>
+                                    <td>6500</td>
+                                    <td>尹开花</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Apple Macbook pro</td>
+                                    <td>5</td>
+                                    <td>50000</td>
+                                    <td>刘老根</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger">查看详细<span style="font-size: 12px;margin-left: 3px;">&gt;&gt;</span></button>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="list-group col-xs-6">
+                <a href="#" class="list-group-item active ">
+                    工程进度
+                </a>
+
+                <ul class="list-group list-group-item ">
+                    <button class="btn btn-primary dropdown-toggle form-group">水井挖掘工程</button>
+                    <div class="progress help-block">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em ;width: 310px;">
+                        </div>
+                    </div>
+                    <button class="btn btn-danger dropdown-toggle form-group">基建工程</button>
+                    <div class="progress  help-block">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="./bootstrap-3.4.1-dist/js/jquery.min.js"></script>
+    <script src="./bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
