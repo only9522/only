@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h3 {
+      color: gray;
+    }
+    span {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    span:hover {
+      color: red;
+      
+    }
+  </style>
+</head>
+<body>
+  <!-- jquery作业布局 -->
+  <h3>jquery增删操作</h3>
+  <div><input type="text"><button class="addBtn">添加</button></div>
+  <ol></ol>
+  <button class="emptyBtn">清空列表</button>
+  <!-- SQL小测试 -->
+  <h3>SQL小测试</h3>
+  <h4>
+    <span>1、C</span>
+    <span>2、B</span>
+    <span>3、C</span>
+    <span>4、B</span>
+    <span>5、D</span>
+    <span>6、B</span>
+    <span>7、C</span>
+    <span>8、D</span>
+    <span>9、A</span>
+    <span>10、正确</span>
+    <span>11、C</span>
+    <span>12、A</span>
+    <span>13、C</span>
+    <span>14、D</span>
+    <span>15、A</span>
+    <span>16、C</span>
+    <span>17、A</span>
+    <span>18、B</span>
+    <span>19、A</span>
+    <span>20、C</span>
+  </h4>
+<!--  php练习题-->
+<h3>php练习题</h3>
+  <pre>
+    // 1-100的数字
+for($i = 1; $i <= 100; $i++) {
+  echo $i;
+}
+// 1-100的所有偶数
+for($i = 1; $i <= 100; $i++) {
+  if($i % 2 === 0) {
+    echo $i;
+  }
+}
+// 1-100 % 3 || % 5
+for($i = 1; $i <= 100; $i++) {
+  switch ($i) {
+    case $i % 3 === 0 && $i % 5 === 0:
+        echo "foobar ";
+        break;
+    case $i % 3 === 0:
+        echo "foo ";
+        break;
+    case $i % 5 === 0:
+        echo "bar ";
+        break;
+    default:
+        echo $i;
+}
+}
+  </pre>
+  <script src="./jquery.mini.js"></script>
+  <script>
+    // 添加按钮点击事件
+    $('.addBtn').click(function() {
+      if(!$('input').val()) {
+        window.alert('还没填写内容');
+      }else {
+        let value = $('input').val();
+        $('ol').prepend(`<li><p><span>X</span>${value}</p></li>`);
+        $('input').val('');
+      }
+    })
+    // span点击事件
+    $('ol').on('click','span',function() {
+      $(this).parents('li').remove();
+    })
+    // 清空按钮点击事件
+    $('.emptyBtn').click(function() {
+      $('ol').empty();
+    })
+  </script>
+</body>
+</html>
